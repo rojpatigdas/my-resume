@@ -6,9 +6,34 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.8;
+    background: linear-gradient(135deg, #e0f7fa 0%, #f4f4f4 100%);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    color: #009688;
+}
+
+h2 {
+    border-bottom: 2px solid #009688;
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #e0f7fa 60%, transparent 100%);
+}
+
+a {
+    color: #009688;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover, a:focus {
+    color: #00796b;
+    text-decoration: underline;
 }
 
 .container {
@@ -38,18 +63,42 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #009688;
     color: #fff;
-    padding: 20px 0;
+    padding: 24px 0;
+    box-shadow: 0 2px 12px rgba(0,150,136,0.08);
+}
+
+header h1, header p, .header-info h1, .header-info p {
+    color: #fff;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 14px;
 }
 
 header p {
     font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+}
+
+.header-info, .header-info h1, .header-info p {
+    color: #fff;
+}
+
+.header-info a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.header-info a:hover, .header-info a:focus {
+    color: #b2dfdb;
 }
 
 /* About Section */
@@ -75,12 +124,13 @@ header p {
 
 .skill-item {
     flex: 1 1 150px;
-    background-color: #333;
-    color: #fff;
+    background-color: #e0f7fa;
+    color: #00695c;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
     font-size: 1rem;
+    border: 1px solid #b2dfdb;
 }
 
 /* Experience Section */
@@ -124,10 +174,11 @@ section p {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #00695c;
+    color: #e0f7fa;
     padding: 20px;
     text-align: center;
+    border-top: 4px solid #009688;
 }
 
 /* Fixed QR Code in Bottom Right */
@@ -141,6 +192,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgba(0,150,136,0.07);
+    border-radius: 16px;
 }
 
 /* Silhouette background for QR code */
@@ -220,4 +273,70 @@ footer {
     .skills {
         /* Add responsive styles here if needed */
     }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #232b2b 0%, #263238 100%);
+    color: #e0f7fa;
+  }
+  header {
+    background-color: #004d40;
+    color: #e0f7fa;
+    box-shadow: 0 2px 12px rgba(0,150,136,0.18);
+  }
+  .about, .education, .experience .job, .projects, footer .container {
+    background: #263238cc;
+    color: #e0f7fa;
+    box-shadow: 0 2px 12px rgba(0,150,136,0.13);
+  }
+  h1, h2, h3 {
+    color: #26ffe6;
+  }
+  h2 {
+    border-bottom: 2px solid #26ffe6;
+    background: linear-gradient(90deg, #004d40 60%, transparent 100%);
+  }
+  a {
+    color: #26ffe6;
+  }
+  a:hover, a:focus {
+    color: #80cbc4;
+  }
+  .skill-item {
+    background-color: #004d40;
+    color: #e0f7fa;
+    border: 1px solid #26ffe6;
+  }
+  footer {
+    background-color: #232b2b;
+    color: #e0f7fa;
+    border-top: 4px solid #26ffe6;
+  }
+  .qr-fixed {
+    background: rgba(38,255,230,0.07);
+  }
+  .header-info, .header-info h1, .header-info p {
+    color: #e0f7fa;
+  }
+  .header-info a {
+    color: #26ffe6;
+  }
+  .header-info a:hover, .header-info a:focus {
+    color: #80cbc4;
+  }
+  .about p,
+  .experience ul li,
+  section p,
+  .education p,
+  .projects .project,
+  ul li {
+    color: #e0f7fa;
+  }
+  .experience h3 {
+    color: #26ffe6;
+  }
+  .degree h3 {
+    color: #26ffe6;
+  }
 }
